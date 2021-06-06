@@ -9,7 +9,49 @@ const jobTypes = {
   programmer: 'Any Ship!'
 };
 
+// ************************PSUEDO CODE***************************//
+// create a crewMemeber class
+//use class keyword and name your class
+// use the constructor function to take in certain attributes
+//assign attributes to local variable
+//
+
+
+
 // Your code will go here
+
+//**********************MY CODE******************************//
+class CrewMember{
+ constructor(name, job, specialSkill) {
+  this.name = name;
+  this.job = job;
+  this.specialSkill = specialSkill;
+  this.ship = null;
+
+ }
+enterShip(team){
+  this.ship = team;
+  team.crew.push(this);
+}
+
+} 
+
+class Ship{
+  constructor(name, type, ability) {
+    this.name = name;
+    this.type = type;
+    this.ability = ability;
+    this.crew = [];
+  }
+  missionStatement(){
+    if(this.crew.length == 0) {
+      return "Can't perform a mission yet."
+    } else {
+      return this.ability
+    }
+  }
+}
+
 
 
 
